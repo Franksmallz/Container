@@ -12,7 +12,7 @@ COPY . .
 
 # publish
 FROM build AS publish
-WORKDIR /src/Colors.API
+WORKDIR /src/DMS
 RUN dotnet publish -c Release -o /src/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS runtime
