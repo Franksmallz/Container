@@ -51,6 +51,7 @@ namespace DispatchManagementEngine
                 options.KnownNetworks.Clear();
                 options.KnownProxies.Clear();
             });
+           });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
