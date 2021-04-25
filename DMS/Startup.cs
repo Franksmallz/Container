@@ -45,6 +45,13 @@ namespace DispatchManagementEngine
                 });
             });
                 services.AddHttpsRedirection(options => { options.HttpsPort = 443; });
+                services.Configure<ForwardedHeadersOptions>(options =>
+            {
+                options.ForwardedHeaders = ForwardedHeaders.XForwardedFor |
+                                           ForwardedHeaders.XForwardedProto;
+                options.KnownNetworks.Clear();
+                options.KnownProxies.Clear();
+            });
 
 
             }
